@@ -5770,12 +5770,15 @@ async function createApp(ssrContext, config = {}) {
         "content": "博客，随笔，文章"
       }],
       "link": [{
-        "rel": "icon",
+        "rel": "shortcut icon",
         "type": "image\u002Fx-icon",
-        "href": ".\u002Ffavicon.ico"
+        "href": "\u002F\u002Frenserve.com\u002Ffavicon.png"
       }, {
         "rel": "stylesheet",
         "href": "\u002F\u002Fat.alicdn.com\u002Ft\u002Ffont_2079289_r2fige13dde.css"
+      }, {
+        "rel": "dns-prefetch",
+        "href": "\u002F\u002Frenserve.com"
       }, {
         "rel": "dns-prefetch",
         "href": "\u002F\u002Fblog.renserve.com"

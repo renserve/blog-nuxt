@@ -14,8 +14,9 @@ module.exports = {
             {hid: 'description', name: 'description', content: process.env.npm_package_description || ''}
         ],
         link: [
-            {rel: 'icon', type: 'image/x-icon', href: './favicon.ico'},
+            {rel: 'shortcut icon', type: 'image/x-icon', href: '//renserve.com/favicon.png'},
             { rel: 'stylesheet', href: '//at.alicdn.com/t/font_2079289_r2fige13dde.css' },
+            { rel: 'dns-prefetch', href: '//renserve.com' },
             { rel: 'dns-prefetch', href: '//blog.renserve.com' },
         ],
         script: [
