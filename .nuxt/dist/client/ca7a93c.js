@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{520:function(e,n,t){"use strict";t.r(n);var c={name:"categoryWrap"},r=t(4),component=Object(r.a)(c,(function(){var e=this.$createElement;return(this._self._c||e)("nuxt-child")}),[],!1,null,"adb77040",null);n.default=component.exports}}]);

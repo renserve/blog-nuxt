@@ -1,0 +1,44 @@
+{
+  "name": "Journey",
+  "version": "1.0.0",
+  "description": "博客，随笔，文章",
+  "private": true,
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate"
+  },
+  "config": {
+    "nuxt": {
+      "host": "127.0.0.1",
+      "port": 5100
+    }
+  },
+  "dependencies": {
+    "@nuxtjs/component-cache": "^1.1.5",
+    "@nuxtjs/pwa": "^3.0.0-beta.16",
+    "@nuxtjs/style-resources": "^0.1.2",
+    "axios": "^0.19.0",
+    "compression-webpack-plugin": "^5.0.1",
+    "cross-env": "^5.2.0",
+    "dompurify": "^1.0.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "gravatar": "^1.8.0",
+    "highlight.js": "^9.15.8",
+    "koa": "^2.6.2",
+    "koa-compress": "^5.0.1",
+    "marked": "^0.7.0",
+    "node-sass": "^4.14.0",
+    "nuxt": "^2.8.1",
+    "sass-loader": "^7.1.0",
+    "throttle-debounce": "^2.1.0",
+    "vuex-persistedstate": "^3.1.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "lodash": "^4.17.20",
+    "nodemon": "^1.18.9"
+  }
+}
