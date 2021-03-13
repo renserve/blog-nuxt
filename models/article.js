@@ -29,7 +29,7 @@ class Article {
     
     // 获取某篇文章详情
     async getArticleDetail(params) {
-        const res = await get(params.isFront?`/web/article/article/private/${params.id}`:`/web/article/article/${params.id}`)
+        const res = await get(params.isFront?`/web/article/article/private/${params.id}?view=${params.view || 0}`:`/web/article/article/${params.id}?view=${params.view || 0}`)
         return res
     }
     

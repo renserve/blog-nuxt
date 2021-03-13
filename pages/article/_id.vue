@@ -57,7 +57,7 @@
                 <split-line class="split-line" :icon="'message'" :desc="'评论'"></split-line>
                 <div class="comment-wrapper">
                     <comment :loading="loading" :total="comments_total" :comments="comments"
-                             @createCommentSuccess="getComments" :articleId="parseInt(id)"></comment>
+                             @createCommentSuccess="getSuccessComments" :articleId="parseInt(id)"></comment>
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
             </div>
             <div class="item" @click="scrollToComment">
                 <span class="count">{{comments.length}}</span>
-                <i class="icon icon-message-fill"></i>
+                <i class="icon icon-message-fill" :class="{'is-like': isComment}"></i>
             </div>
         </aside>
         <Dialog :visible.sync="dialogVisible" :loading="imgLoading" :imgSrc="imgSrc"></Dialog>
@@ -84,6 +84,7 @@
     import Dialog from '@/components/base/dialog/dialog'
     import ClientOnly from '@/components/base/client-only/client-only'
     import defaultConfig from '@/config/const'
+    import cloneDeep from 'lodash/cloneDeep'
     import {mapState, mapMutations} from 'vuex'
 
     export default {
@@ -106,7 +107,13 @@
 
         async fetch({store, params}) {
             const token = store.state.app.token
-            await store.dispatch('article/getArticleDetail', {id: params.id, isFront: token ? true : false})
+            const data={id: params.id, isFront: token ? true : false}
+            const viewIds = store.state.app.userLocal.viewIds
+            if(!viewIds.includes(params.id)){
+                data.view=1
+            }
+            store.commit('app/setLocalInfo',{k:'viewIds',v:params.id})
+            await store.dispatch('article/getArticleDetail', data)
             await store.dispatch('article/getComments', {
                 classId: params.id,
                 page: 0,
@@ -121,6 +128,7 @@
                 imgSrc: '',
                 id: 0,
                 likeArticles: [],
+                commentArticles: [],
                 articleCover: {},
                 articleLike: 0
             }
@@ -153,7 +161,9 @@
                 },
                 comments: state => state.article.comments
             }),
-
+            isComment() {
+                return this.commentArticles.includes(this.id)
+            },
             isLike() {
                 return this.likeArticles.includes(this.id)
             },
@@ -183,7 +193,22 @@
             marked(content) {
                 return markdown(content)
             },
-
+            handleLocalInfo(k,v){
+                const userId=window.localStorage.getItem('userId')
+                const userLocal=cloneDeep(JSON.parse(window.localStorage.getItem(userId)))
+                if(v===undefined){
+                    if(userId){
+                        return userLocal[k]
+                    }else {
+                        return []
+                    }
+                }else {
+                    if(!userLocal[k].includes(v)){
+                        userLocal[k].push(v)
+                        window.localStorage.setItem(userId,JSON.stringify(userLocal))
+                    }
+                }
+            },
             // 点赞文章
             async likeArticle() {
                 if (this.isLike) {
@@ -194,7 +219,7 @@
                     if (res.code === 3) {
                         this.articleLike++
                         this.likeArticles.push(this.id)
-                        window.localStorage.setItem('LIKE_ARTICLES', JSON.stringify(this.likeArticles))
+                        this.handleLocalInfo('likeIds',this.id)
                     }
                 } catch (e) {
                     // eslint-disable-next-line no-console
@@ -216,13 +241,9 @@
                 })
             },
 
-            getLikeArticles() {
-                if (process.client) {
-                    this.likeArticles = JSON.parse(window.localStorage.getItem('LIKE_ARTICLES') || '[]')
-                }
-            },
 
-            getComments() {
+            getSuccessComments() {
+                this.commentArticles.push(this.id)
                 this.$store.dispatch('article/getComments', {
                     classId: this.id
                 })
@@ -256,10 +277,11 @@
 
         created() {
             this.id = this.$nuxt.$route.params.id
-            this.getLikeArticles()
         },
 
         mounted() {
+            this.likeArticles=this.handleLocalInfo('likeIds')
+            this.commentArticles=this.handleLocalInfo('commentIds')
             this.$nextTick(()=>{
                 this.initImg()
             })

@@ -16,6 +16,7 @@
 <script>
     import CommentList from "./comment-list";
     import CommentEditor from "@/components/base/comment-editor/comment-editor";
+    import cloneDeep from "lodash/cloneDeep";
 
     export default {
         components: {
@@ -80,7 +81,23 @@
                 }
                 this.$refs.editor.resetField()
             },
-
+            handleLocalInfo(k,v){
+                const userId=window.localStorage.getItem('userId')
+                const userLocal=cloneDeep(JSON.parse(window.localStorage.getItem(userId)))
+                console.log(k,v)
+                if(v===undefined){
+                    if(userId){
+                        return userLocal[k]
+                    }else {
+                        return []
+                    }
+                }else {
+                    if(!userLocal[k].includes(v)){
+                        userLocal[k].push(v)
+                        window.localStorage.setItem(userId,JSON.stringify(userLocal))
+                    }
+                }
+            },
             async onSend(data) {
                 if (!this.articleId) {
                     return
@@ -96,6 +113,7 @@
                         const res = await this.$store.dispatch('article/replyComment', data)
                         if (res.code === 1) {
                             this.closeReply()
+                            this.handleLocalInfo('commentIds',String(this.articleId))
                             this.$emit('createCommentSuccess')
                         }
                     } catch (e) {
@@ -110,6 +128,7 @@
                         const res = await this.$store.dispatch('article/createComment', data)
                         if (res.code === 1) {
                             this.$refs.editor.resetField()
+                            this.handleLocalInfo('commentIds',String(this.articleId))
                             this.$emit('createCommentSuccess')
                         }
                     } catch (e) {

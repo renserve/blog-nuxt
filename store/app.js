@@ -1,5 +1,6 @@
 import webConfig from '../config/const'
 import author from "../models/author";
+import cloneDeep from "lodash/cloneDeep";
 export const state = () => ({
     theme: 'light',
     webConfig:webConfig,
@@ -10,6 +11,7 @@ export const state = () => ({
         about:false,
         tag:false,
     },
+    userLocal:{likeIds:[],commentIds:[],viewIds:[]},
     params:undefined,
     clientNavList:[],
     navList:[
@@ -59,6 +61,19 @@ export const mutations = {
     showMoodList(state, data){
         // console.log()
         state.isMoodList[data[0]]=data[1]
+    },
+    setLocalInfo(state,data){
+        if(process.client){
+            const userId=window.localStorage.getItem('userId')
+            if(userId){
+                const userLocal=cloneDeep(JSON.parse(window.localStorage.getItem(userId)))
+                state.userLocal=userLocal
+                if(!userLocal[data.k].includes(data.v)){
+                    userLocal[data.k].push(data.v)
+                    window.localStorage.setItem(userId,JSON.stringify(state.userLocal))
+                }
+            }
+        }
     },
     setToken(state, token) {
         if(!token && process.client){

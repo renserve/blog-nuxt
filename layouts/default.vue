@@ -21,6 +21,7 @@
     import PageFooter from '@/components/layout/page-footer/page-footer'
     import PageSearch from '@/components/layout/page-search/page-search'
     import ScrollTop from '@/components/layout/scroll-top/scroll-top'
+    import cloneDeep from "lodash/cloneDeep";
     export default {
         components: {
             PageHeader,
@@ -52,10 +53,45 @@
         methods: {
             ...mapMutations({
                 setTheme: 'app/setTheme'
-            })
+            }),
+            handleLocalInfo(k,v){
+                const userId=window.localStorage.getItem('userId')
+                const userLocal=cloneDeep(JSON.parse(window.localStorage.getItem(userId)))
+                if(v===undefined){
+                    if(userId){
+                        return userLocal[k]
+                    }else {
+                        return []
+                    }
+                }else {
+                    if(!userLocal[k].includes(v)){
+                        userLocal[k].push(v)
+                        window.localStorage.setItem(userId,JSON.stringify(userLocal))
+                    }
+                }
+            },
+            setFingerprint(){
+                const userId=window.localStorage.getItem('userId')
+                if(!userId){
+                    requestIdleCallback(function () {
+                        Fingerprint2.get(function (components) {
+                            // console.log(components) // an array of components: {key: ..., value: ...}
+                            var values = components.map(function (component) { return component.value })
+                            var murmur = Fingerprint2.x64hash128(values.join(''), 31)
+                            window.localStorage.setItem('userId',murmur)
+                            window.localStorage.setItem(murmur,JSON.stringify({likeIds:[],commentIds:[],viewIds:[]}))
+                        })
+                    })
+                }else {
+                    const userLocalInfo=window.localStorage.getItem(userId)
+                }
+            }
         },
 
         mounted() {
+            this.$nextTick(()=>{
+                this.setFingerprint()
+            })
             this.setTheme(this.theme || 'light')
         }
     }

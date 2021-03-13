@@ -23,7 +23,7 @@
     {
       "hid": "description",
       "name": "description",
-      "content": "博客，随笔，文章"
+      "content": "人生是一场持续的修行，记录生活中的点滴，在前行中不断矫正方向，成为心中更加优秀的自己"
     },
     {
       "hid": "og:type",
@@ -47,7 +47,7 @@
       "hid": "og:description",
       "name": "og:description",
       "property": "og:description",
-      "content": "博客，随笔，文章"
+      "content": "人生是一场持续的修行，记录生活中的点滴，在前行中不断矫正方向，成为心中更加优秀的自己"
     }
   ],
   "link": [
@@ -57,7 +57,7 @@
     },
     {
       "rel": "manifest",
-      "href": "/_nuxt/manifest.be5d8e6b.json",
+      "href": "/_nuxt/manifest.a100e3f5.json",
       "hid": "manifest"
     }
   ],

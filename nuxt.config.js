@@ -2,16 +2,17 @@ const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
     head: {
-        title: '点滴人生',
+        title: '点滴人生-记录日常学习和生活的个人网站',
         titleTemplate: '%s',
         meta: [
             {charset: 'utf-8'},
-            {'http-equiv': 'cleartype', content: 'on'},
-            {'http-equiv': 'Cache-Control'},
+            {'http-equiv': 'X-UA-Compatible',content:'IE=Edge, chrome=1'},
             {name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no'},
-            {hid: 'keywords', name: 'keywords', content: '前端，JavaScript，博客，Node，Vue'},
-            {name: 'author', content: '1249485588@qq.com'},
-            {hid: 'description', name: 'description', content: process.env.npm_package_description || ''}
+            {hid: 'keywords', name: 'keywords', content: '个人博客，日常学习，生活记录'},
+            {name: 'apple-mobile-web-app-capable', content: 'yes'},
+            {name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent'},
+            {name: 'mobile-web-app-capable', content: 'yes'},
+            {hid: 'description', name: 'description', content:"人生是一场持续的修行，记录生活中的点滴，在前行中不断矫正方向，成为心中更加优秀的自己"}
         ],
         link: [
             {rel: 'shortcut icon', type: 'image/x-icon', href: '//renserve.com/favicon.png'},
@@ -20,6 +21,10 @@ module.exports = {
             { rel: 'dns-prefetch', href: '//blog.renserve.com' },
         ],
         script: [
+            {
+                type: 'text/javascript',
+                src: 'https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/2.1.4/fingerprint2.min.js'
+            },
             {
                 type: 'text/javascript',
                 src: 'https://cdnjs.cloudflare.com/ajax/libs/js-cookie/1.5.0/js.cookie.min.js'
