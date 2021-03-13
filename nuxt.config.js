@@ -15,7 +15,8 @@ module.exports = {
             {hid: 'description', name: 'description', content:"人生是一场持续的修行，记录生活中的点滴，在前行中不断矫正方向，成为心中更加优秀的自己"}
         ],
         link: [
-            {rel: 'shortcut icon', type: 'image/x-icon', href: '//renserve.com/favicon.png'},
+            {rel: 'shortcut icon', type: 'image/png', href: '//renserve.com/favicon.png'},
+            { rel: 'apple-touch-icon-precomposed', href: '//renserve.com/favicon.png' },
             { rel: 'stylesheet', href: '//at.alicdn.com/t/font_2079289_r2fige13dde.css' },
             { rel: 'dns-prefetch', href: '//renserve.com' },
             { rel: 'dns-prefetch', href: '//blog.renserve.com' },

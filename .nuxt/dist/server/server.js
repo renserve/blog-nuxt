@@ -5844,7 +5844,10 @@ async function createApp(ssrContext, config = {}) {
       }],
       "link": [{
         "rel": "shortcut icon",
-        "type": "image\u002Fx-icon",
+        "type": "image\u002Fpng",
+        "href": "\u002F\u002Frenserve.com\u002Ffavicon.png"
+      }, {
+        "rel": "apple-touch-icon-precomposed",
         "href": "\u002F\u002Frenserve.com\u002Ffavicon.png"
       }, {
         "rel": "stylesheet",
