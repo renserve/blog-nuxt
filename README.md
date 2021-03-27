@@ -1,9 +1,9 @@
-# blogAvue
+# blogNuxt
 >项目背景：个人博客
 
 项目基于nuxt
 
-可以通过访问 http://blog.renserve.com 预览。
+可以通过访问 https://blog.renserve.com 预览。
 
 # 博客界面
 ![](static/1.jpg)
