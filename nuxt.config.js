@@ -24,15 +24,15 @@ module.exports = {
         script: [
             {
                 type: 'text/javascript',
-                src: 'https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/2.1.4/fingerprint2.min.js'
+                src: 'https://cdn.jsdelivr.net/npm/fingerprintjs2@2.1.4/fingerprint2.min.js'
             },
             {
                 type: 'text/javascript',
-                src: 'https://cdnjs.cloudflare.com/ajax/libs/js-cookie/1.5.0/js.cookie.min.js'
+                src: 'https://cdn.jsdelivr.net/npm/js-cookie@1.5.0/src/js.cookie.min.js'
             },
             {
                 type: 'text/javascript',
-                src: 'https://cdnjs.cloudflare.com/ajax/libs/marked/0.7.0/marked.min.js'
+                src: 'https://cdn.jsdelivr.net/npm/marked@0.7.0/marked.min.js'
             }
         ],
         noscript: [

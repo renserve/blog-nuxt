@@ -5861,13 +5861,13 @@ async function createApp(ssrContext, config = {}) {
       }],
       "script": [{
         "type": "text\u002Fjavascript",
-        "src": "https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Ffingerprintjs2\u002F2.1.4\u002Ffingerprint2.min.js"
+        "src": "https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Ffingerprintjs2@2.1.4\u002Ffingerprint2.min.js"
       }, {
         "type": "text\u002Fjavascript",
-        "src": "https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fjs-cookie\u002F1.5.0\u002Fjs.cookie.min.js"
+        "src": "https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fjs-cookie@1.5.0\u002Fsrc\u002Fjs.cookie.min.js"
       }, {
         "type": "text\u002Fjavascript",
-        "src": "https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fmarked\u002F0.7.0\u002Fmarked.min.js"
+        "src": "https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fmarked@0.7.0\u002Fmarked.min.js"
       }],
       "noscript": [{
         "innerHTML": "This website requires JavaScript."

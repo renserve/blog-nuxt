@@ -3,71 +3,61 @@
     "name": "about",
     "path": "/about",
     "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\about\\\\index.vue",
-    "chunkName": "pages/about/index",
-    "_name": "_5b54592f"
+    "chunkName": "pages/about/index"
   },
   {
     "name": "archive",
     "path": "/archive",
     "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\archive\\\\index.vue",
-    "chunkName": "pages/archive/index",
-    "_name": "_d6c0f74c"
+    "chunkName": "pages/archive/index"
   },
   {
     "name": "login",
     "path": "/login",
     "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\login\\\\index.vue",
-    "chunkName": "pages/login/index",
-    "_name": "_3180cbd3"
+    "chunkName": "pages/login/index"
   },
   {
     "name": "messages",
     "path": "/messages",
     "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\messages\\\\index.vue",
-    "chunkName": "pages/messages/index",
-    "_name": "_7a3de0ec"
+    "chunkName": "pages/messages/index"
   },
   {
     "name": "mood",
     "path": "/mood",
     "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\mood\\\\index.vue",
-    "chunkName": "pages/mood/index",
-    "_name": "_5aedd53e"
+    "chunkName": "pages/mood/index"
   },
   {
     "name": "sitemap",
     "path": "/sitemap",
     "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\sitemap\\\\index.vue",
-    "chunkName": "pages/sitemap/index",
-    "_name": "_6d405af2"
+    "chunkName": "pages/sitemap/index"
   },
   {
     "name": "about-id",
     "path": "/about/:id",
     "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\about\\\\_id.vue",
-    "chunkName": "pages/about/_id",
-    "_name": "_b5964952"
+    "chunkName": "pages/about/_id"
   },
   {
     "name": "article-id",
     "path": "/article/:id?",
     "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\article\\\\_id.vue",
-    "chunkName": "pages/article/_id",
-    "_name": "_838938e4"
+    "chunkName": "pages/article/_id"
   },
   {
     "name": "tag-id",
     "path": "/tag/:id?",
     "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\tag\\\\_id.vue",
-    "chunkName": "pages/tag/_id",
-    "_name": "_7000f26a"
+    "chunkName": "pages/tag/_id"
   },
   {
     "name": "index",
     "path": "/",
     "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_73e40eb8"
+    "chunkName": "pages/index"
   },
   {
     "path": "/:category",
@@ -78,8 +68,7 @@
         "name": "category",
         "path": "",
         "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\_category\\\\index.vue",
-        "chunkName": "pages/_category/index",
-        "_name": "_80bf3942"
+        "chunkName": "pages/_category/index"
       },
       {
         "name": "category-categoryId",
@@ -91,13 +80,10 @@
             "name": "category-categoryId-tagId",
             "path": ":tagId?",
             "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\_category\\\\_categoryId\\\\_tagId.vue",
-            "chunkName": "pages/_category/_categoryId/_tagId",
-            "_name": "_5c9a70fb"
+            "chunkName": "pages/_category/_categoryId/_tagId"
           }
-        ],
-        "_name": "_58c49025"
+        ]
       }
-    ],
-    "_name": "_47023fc3"
+    ]
   }
 ]
