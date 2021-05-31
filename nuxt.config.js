@@ -1,5 +1,5 @@
 const CompressionPlugin = require('compression-webpack-plugin');
-
+const sitemap=require('./config/sitemap')
 module.exports = {
     head: {
         title: '点滴人生-记录日常学习和生活的个人网站',
@@ -91,6 +91,7 @@ module.exports = {
     ** Nuxt.js modules
     */
     modules: [
+        '@nuxtjs/sitemap',
         '@nuxtjs/pwa',
         '@nuxtjs/style-resources',
         [
@@ -101,7 +102,7 @@ module.exports = {
             }
         ],
     ],
-    
+    sitemap: sitemap,
     styleResources: {
         scss: ['./assets/scss/variables.scss', './assets/scss/mixin.scss']
     },
