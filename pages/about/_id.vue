@@ -35,8 +35,13 @@
             }
         },
 
-        async fetch({store, params}) {
+        async fetch({store, params,query}) {
             const token = store.state.app.token
+            if(query.type==='mood'){
+                store.commit('app/showMoodList', ['about',true])
+            }else {
+                store.commit('app/showMoodList', ['about',false])
+            }
             await store.dispatch('about/getArticles', {
                 authorId: params.id,
                 page: 0,

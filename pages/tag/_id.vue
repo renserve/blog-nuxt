@@ -17,8 +17,13 @@
             }
         },
 
-        async fetch({store, params}) {
+        async fetch({store, params,query}) {
             const token = store.state.app.token
+            if(query.type==='mood'){
+                store.commit('app/showMoodList', ['tag',true])
+            }else {
+                store.commit('app/showMoodList', ['tag',false])
+            }
             await store.dispatch('tag/getArticles', {
                 tagId: params.id,
                 page: 0,

@@ -514,12 +514,12 @@ var component = Object(componentNormalizer["a" /* default */])(
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./pages/_category/_categoryId/_tagId.vue?vue&type=template&id=720c6efd&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./pages/_category/_categoryId/_tagId.vue?vue&type=template&id=25918026&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('tag-detail',{attrs:{"id":_vm.categoryId,"tagName":_vm.tagName,"type":"category","name":_vm.name,"cover":_vm.cover,"description":_vm.description}})}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./pages/_category/_categoryId/_tagId.vue?vue&type=template&id=720c6efd&
+// CONCATENATED MODULE: ./pages/_category/_categoryId/_tagId.vue?vue&type=template&id=25918026&
 
 // EXTERNAL MODULE: ./components/layout/tag-detail/tag-detail.vue + 4 modules
 var tag_detail = __webpack_require__(145);
@@ -555,9 +555,17 @@ var config_const = __webpack_require__(12);
 
   async fetch({
     store,
-    params
+    params,
+    query
   }) {
     const token = store.state.app.token;
+
+    if (query.type === 'mood') {
+      store.commit('app/showMoodList', ['tag', true]);
+    } else {
+      store.commit('app/showMoodList', ['tag', false]);
+    }
+
     await store.dispatch('tag/getArticles', {
       categoryId: params.categoryId,
       tagId: params.tagId,

@@ -1,5 +1,6 @@
 const axios=require('axios')
-const hostname='https://blog.renserve.com/api/'
+const baseUrl='https://blog.renserve.com/api'
+const hostname='https://blog.renserve.com/'
 // const hostname='http://127.0.0.1:5100/'
 module.exports= {
     path: '/sitemap.xml', // sitemap文件名，不用改
@@ -16,9 +17,9 @@ module.exports= {
     routes (callback) {
         axios.all([
             // blog 标签
-            axios.get(`${hostname}web/article/classify/tag?modelId=1`),
+            axios.get(`${baseUrl}/web/article/classify/tag?modelId=1`),
             // 归档,10条
-            axios.get(`${hostname}web/article/article?page=0&count=10&isFront=false&modelId=1&archive=1`)
+            axios.get(`${baseUrl}/web/article/article?page=0&count=10&isFront=false&modelId=1&archive=1`)
         ]).then(axios.spread((tags,articles)=> {
             let now = new Date();
             now.setHours(now.getHours(), now.getMinutes() - now.getTimezoneOffset());
@@ -62,7 +63,7 @@ module.exports= {
             ],tagRoutes=[],articleRoutes=[];
             articles.data.rows.map(article => {
                 articleRoutes.push({
-                    url:`/web/article/article/${article.id}?view=1`,
+                    url:`/article/${article.id}?view=1`,
                     changefreq: 'daily',
                     priority: 1,
                     lastmodISO: new Date(article.create_time).toISOString()
@@ -72,13 +73,13 @@ module.exports= {
                 if (tag.categories.length) {
                     tag.categories.map(category=>{
                         tagRoutes.push({
-                            url:`/web/article/mood?categoryId=${category.id}&tagId=${tag.id}&page=0&count=10&isFront=false&modelId=1`,
+                            url:`/category/${category.id}/${tag.id}`,
                             changefreq: 'daily',
                             priority:1,
                             lastmodISO: now.toISOString()
                         });
                         tagRoutes.push({
-                            url:`/web/article/article?categoryId=${category.id}&tagId=${tag.id}&page=0&count=10&isFront=false&modelId=1`,
+                            url:`/category/${category.id}/${tag.id}?type=mood`,
                             changefreq: 'daily',
                             priority: 1,
                             lastmodISO: now.toISOString()
@@ -86,13 +87,13 @@ module.exports= {
                     });
                 }else {
                     tagRoutes.push({
-                        url:`/web/article/mood?tagId=${tag.id}&page=0&count=10&isFront=false&modelId=1`,
+                        url:`/tag/${tag.id}`,
                         changefreq: 'daily',
                         priority: 1,
                         lastmodISO: now.toISOString()
                     });
                     tagRoutes.push({
-                        url:`/web/article/article?tagId=${tag.id}&page=0&count=10&isFront=false&modelId=1`,
+                        url:`/tag/${tag.id}?type=mood`,
                         changefreq: 'daily',
                         priority: 1,
                         lastmodISO: now.toISOString()

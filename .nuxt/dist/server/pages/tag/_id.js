@@ -514,12 +514,12 @@ var component = Object(componentNormalizer["a" /* default */])(
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./pages/tag/_id.vue?vue&type=template&id=6f9fc943&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./pages/tag/_id.vue?vue&type=template&id=74e0d7eb&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('tag-detail',{attrs:{"id":_vm.id,"type":"tag","name":_vm.name,"cover":_vm.cover}})}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./pages/tag/_id.vue?vue&type=template&id=6f9fc943&
+// CONCATENATED MODULE: ./pages/tag/_id.vue?vue&type=template&id=74e0d7eb&
 
 // EXTERNAL MODULE: ./components/layout/tag-detail/tag-detail.vue + 4 modules
 var tag_detail = __webpack_require__(145);
@@ -551,9 +551,17 @@ var external_vuex_ = __webpack_require__(3);
 
   async fetch({
     store,
-    params
+    params,
+    query
   }) {
     const token = store.state.app.token;
+
+    if (query.type === 'mood') {
+      store.commit('app/showMoodList', ['tag', true]);
+    } else {
+      store.commit('app/showMoodList', ['tag', false]);
+    }
+
     await store.dispatch('tag/getArticles', {
       tagId: params.id,
       page: 0,
