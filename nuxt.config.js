@@ -58,7 +58,6 @@ module.exports = {
     /*
     ** Customize the progress-bar color
     */
-    productionSourceMap: false,
     loading: {color: '#fff'},
     /*
     ** Global CSS
@@ -112,13 +111,13 @@ module.exports = {
             background_color: "#FFFBF0",
             theme_color: "#FFFBF0",
             lang: "zh",
-            start_url: "/"
+            start_url: ""
         }
     },
     modules: [
         ['cookie-universal-nuxt', { alias: 'cookies' }],
         '@nuxtjs/sitemap',
-        '@nuxtjs/pwa',
+        "@nuxtjs/pwa",
         '@nuxtjs/style-resources',
         [
             '@nuxtjs/component-cache',
@@ -158,6 +157,9 @@ module.exports = {
             if(ctx.isClient){
                 config.externals = {
                     'marked':'marked'
+                }
+                if (!ctx.isDev && process.env.STATIC_URL) {
+                    config.output.publicPath = process.env.STATIC_URL
                 }
             }
         }
