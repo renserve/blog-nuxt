@@ -171,7 +171,7 @@ var staticRenderFns = []
 var split_line = __webpack_require__(125);
 
 // EXTERNAL MODULE: ./components/base/tag-list/tag-list.vue + 4 modules
-var tag_list = __webpack_require__(28);
+var tag_list = __webpack_require__(29);
 
 // EXTERNAL MODULE: external "vuex"
 var external_vuex_ = __webpack_require__(3);

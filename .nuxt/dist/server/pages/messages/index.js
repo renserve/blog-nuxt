@@ -278,13 +278,13 @@ var staticRenderFns = []
 // CONCATENATED MODULE: ./components/base/comment-editor/comment-editor.vue?vue&type=template&id=2945e851&scoped=true&
 
 // EXTERNAL MODULE: external "throttle-debounce"
-var external_throttle_debounce_ = __webpack_require__(26);
+var external_throttle_debounce_ = __webpack_require__(27);
 
 // EXTERNAL MODULE: ./services/utils/util.js
 var util = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./services/directives/click-outside.js
-var click_outside = __webpack_require__(27);
+var click_outside = __webpack_require__(28);
 var click_outside_default = /*#__PURE__*/__webpack_require__.n(click_outside);
 
 // EXTERNAL MODULE: ./services/utils/dom.js

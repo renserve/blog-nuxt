@@ -23,11 +23,7 @@ module.exports = {
         ],
 <!-- Global site tag (gtag.js) - Google Analytics -->
         script: [
-            {
-                type: 'text/javascript',
-                src: 'https://www.googletagmanager.com/gtag/js?id=G-KJQ6N85P15'
-            },
-            {
+            /*{
                 type: 'text/javascript',
                 src: '//blog.renserve.com/gtag.js'
             },
@@ -38,7 +34,7 @@ module.exports = {
             {
                 type: 'text/javascript',
                 src: 'https://cdn.jsdelivr.net/npm/fingerprintjs2@2.1.4/fingerprint2.min.js'
-            },
+            },*/
             {
                 type: 'text/javascript',
                 src: 'https://cdn.jsdelivr.net/npm/js-cookie@1.5.0/src/js.cookie.min.js'
@@ -118,6 +114,9 @@ module.exports = {
         ['cookie-universal-nuxt', { alias: 'cookies' }],
         '@nuxtjs/sitemap',
         // "@nuxtjs/pwa",
+        ['@nuxtjs/google-analytics', {
+            id: 'UA-192066659-3'
+        }],
         '@nuxtjs/style-resources',
         [
             '@nuxtjs/component-cache',
