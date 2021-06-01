@@ -103,7 +103,7 @@ module.exports = {
     /*
     ** Nuxt.js modules
     */
-    pwa: {
+    /*pwa: {
         manifest: {
             name: "点滴人生-记录日常学习和生活的个人网站",
             short_name: "点滴人生",
@@ -113,11 +113,11 @@ module.exports = {
             lang: "zh",
             start_url: ""
         }
-    },
+    },*/
     modules: [
         ['cookie-universal-nuxt', { alias: 'cookies' }],
         '@nuxtjs/sitemap',
-        "@nuxtjs/pwa",
+        // "@nuxtjs/pwa",
         '@nuxtjs/style-resources',
         [
             '@nuxtjs/component-cache',
