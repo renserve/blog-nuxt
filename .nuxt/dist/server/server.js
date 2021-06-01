@@ -1628,7 +1628,7 @@ module.exports = require("lodash/random");
 /* 51 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"title\":\"Journey\",\"meta\":[{\"hid\":\"charset\",\"charset\":\"utf-8\"},{\"hid\":\"viewport\",\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"},{\"hid\":\"mobile-web-app-capable\",\"name\":\"mobile-web-app-capable\",\"content\":\"yes\"},{\"hid\":\"apple-mobile-web-app-title\",\"name\":\"apple-mobile-web-app-title\",\"content\":\"Journey\"},{\"hid\":\"description\",\"name\":\"description\",\"content\":\"人生是一场持续的修行，记录生活中的点滴，在前行中不断矫正方向，成为心中更加优秀的自己\"},{\"hid\":\"og:type\",\"name\":\"og:type\",\"property\":\"og:type\",\"content\":\"website\"},{\"hid\":\"og:title\",\"name\":\"og:title\",\"property\":\"og:title\",\"content\":\"Journey\"},{\"hid\":\"og:site_name\",\"name\":\"og:site_name\",\"property\":\"og:site_name\",\"content\":\"Journey\"},{\"hid\":\"og:description\",\"name\":\"og:description\",\"property\":\"og:description\",\"content\":\"人生是一场持续的修行，记录生活中的点滴，在前行中不断矫正方向，成为心中更加优秀的自己\"}],\"link\":[{\"rel\":\"shortcut icon\",\"href\":\"/favicon.ico\"},{\"rel\":\"manifest\",\"href\":\"/_nuxt/manifest.a100e3f5.json\",\"hid\":\"manifest\"}],\"htmlAttrs\":{\"lang\":\"en\"}}");
+module.exports = JSON.parse("{\"title\":\"点滴人生-记录日常学习和生活的个人网站\",\"meta\":[{\"hid\":\"charset\",\"charset\":\"utf-8\"},{\"hid\":\"viewport\",\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"},{\"hid\":\"mobile-web-app-capable\",\"name\":\"mobile-web-app-capable\",\"content\":\"yes\"},{\"hid\":\"apple-mobile-web-app-title\",\"name\":\"apple-mobile-web-app-title\",\"content\":\"点滴人生-记录日常学习和生活的个人网站\"},{\"hid\":\"description\",\"name\":\"description\",\"content\":\"人生是一场持续的修行，记录生活中的点滴，在前行中不断矫正方向，成为心中更加优秀的自己\"},{\"hid\":\"theme-color\",\"name\":\"theme-color\",\"content\":\"#FFFBF0\"},{\"hid\":\"og:type\",\"name\":\"og:type\",\"property\":\"og:type\",\"content\":\"website\"},{\"hid\":\"og:title\",\"name\":\"og:title\",\"property\":\"og:title\",\"content\":\"点滴人生-记录日常学习和生活的个人网站\"},{\"hid\":\"og:site_name\",\"name\":\"og:site_name\",\"property\":\"og:site_name\",\"content\":\"点滴人生-记录日常学习和生活的个人网站\"},{\"hid\":\"og:description\",\"name\":\"og:description\",\"property\":\"og:description\",\"content\":\"人生是一场持续的修行，记录生活中的点滴，在前行中不断矫正方向，成为心中更加优秀的自己\"}],\"link\":[{\"rel\":\"shortcut icon\",\"href\":\"/_nuxt/icons/icon_64x64.73b3aa.png\"},{\"rel\":\"apple-touch-icon\",\"href\":\"/_nuxt/icons/icon_512x512.73b3aa.png\",\"sizes\":\"512x512\"},{\"rel\":\"manifest\",\"href\":\"/_nuxt/manifest.6b670d17.json\",\"hid\":\"manifest\"}],\"htmlAttrs\":{\"lang\":\"zh\"}}");
 
 /***/ }),
 /* 52 */
@@ -5601,6 +5601,32 @@ var meta_merge_default = /*#__PURE__*/__webpack_require__.n(meta_merge);
 }) {
   meta_merge_default()(app.head, meta);
 });
+// CONCATENATED MODULE: ./.nuxt/pwa/icons.js
+/* harmony default export */ var icons = (async function (ctx, inject) {
+  const icons = {
+    "64x64": "/_nuxt/icons/icon_64x64.73b3aa.png",
+    "120x120": "/_nuxt/icons/icon_120x120.73b3aa.png",
+    "144x144": "/_nuxt/icons/icon_144x144.73b3aa.png",
+    "152x152": "/_nuxt/icons/icon_152x152.73b3aa.png",
+    "192x192": "/_nuxt/icons/icon_192x192.73b3aa.png",
+    "384x384": "/_nuxt/icons/icon_384x384.73b3aa.png",
+    "512x512": "/_nuxt/icons/icon_512x512.73b3aa.png",
+    "ipad_1536x2048": "/_nuxt/icons/splash_ipad_1536x2048.73b3aa.png",
+    "ipadpro9_1536x2048": "/_nuxt/icons/splash_ipadpro9_1536x2048.73b3aa.png",
+    "ipadpro10_1668x2224": "/_nuxt/icons/splash_ipadpro10_1668x2224.73b3aa.png",
+    "ipadpro12_2048x2732": "/_nuxt/icons/splash_ipadpro12_2048x2732.73b3aa.png",
+    "iphonese_640x1136": "/_nuxt/icons/splash_iphonese_640x1136.73b3aa.png",
+    "iphone6_50x1334": "/_nuxt/icons/splash_iphone6_50x1334.73b3aa.png",
+    "iphoneplus_1080x1920": "/_nuxt/icons/splash_iphoneplus_1080x1920.73b3aa.png",
+    "iphonex_1125x2436": "/_nuxt/icons/splash_iphonex_1125x2436.73b3aa.png",
+    "iphonexr_828x1792": "/_nuxt/icons/splash_iphonexr_828x1792.73b3aa.png",
+    "iphonexsmax_1242x2688": "/_nuxt/icons/splash_iphonexsmax_1242x2688.73b3aa.png"
+  };
+
+  const getIcon = size => icons[size + 'x' + size] || '';
+
+  inject('icon', getIcon);
+});
 // EXTERNAL MODULE: external "cookie-universal"
 var external_cookie_universal_ = __webpack_require__(53);
 var external_cookie_universal_default = /*#__PURE__*/__webpack_require__.n(external_cookie_universal_);
@@ -5762,6 +5788,8 @@ external_vue_default.a.component('loading', loading);
  // Source: .\\workbox.js (mode: 'client')
 
  // Source: .\\pwa\\meta.js (mode: 'all')
+
+ // Source: .\\pwa\\icons.js (mode: 'all')
 
  // Source: .\\cookie-universal-nuxt.js (mode: 'all')
 
@@ -6044,6 +6072,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof pwa_meta === 'function') {
     await pwa_meta(app.context, inject);
+  }
+
+  if (typeof icons === 'function') {
+    await icons(app.context, inject);
   }
 
   if (typeof cookie_universal_nuxt === 'function') {

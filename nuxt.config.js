@@ -58,6 +58,7 @@ module.exports = {
     /*
     ** Customize the progress-bar color
     */
+    productionSourceMap: false,
     loading: {color: '#fff'},
     /*
     ** Global CSS
@@ -103,6 +104,17 @@ module.exports = {
     /*
     ** Nuxt.js modules
     */
+    pwa: {
+        manifest: {
+            name: "点滴人生-记录日常学习和生活的个人网站",
+            short_name: "点滴人生",
+            description: "人生是一场持续的修行，记录生活中的点滴，在前行中不断矫正方向，成为心中更加优秀的自己",
+            background_color: "#FFFBF0",
+            theme_color: "#FFFBF0",
+            lang: "zh",
+            start_url: "/"
+        }
+    },
     modules: [
         ['cookie-universal-nuxt', { alias: 'cookies' }],
         '@nuxtjs/sitemap',
