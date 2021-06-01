@@ -63,11 +63,11 @@ export const mutations = {
         state.isMoodList[data[0]]=data[1]
     },
     setLocalInfo(state,data){
+        // window和dom对象只能在客户端访问
         if(process.client){
             const userId=window.localStorage.getItem('userId')
             if(userId){
-                const userLocal=cloneDeep(JSON.parse(window.localStorage.getItem(userId)))
-                state.userLocal=userLocal
+                const userLocal=state.userLocal
                 if(!userLocal[data.k].includes(data.v)){
                     userLocal[data.k].push(data.v)
                     window.localStorage.setItem(userId,JSON.stringify(state.userLocal))

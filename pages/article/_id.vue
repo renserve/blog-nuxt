@@ -105,14 +105,18 @@
             }
         },
 
-        async fetch({store, params}) {
+        async fetch({store, params,app}) {
             const token = store.state.app.token
             const data={id: params.id, isFront: token ? true : false}
-            const viewIds = store.state.app.userLocal.viewIds
+            const viewIds=app.$cookies.get('viewIds') || []
             if(!viewIds.includes(params.id)){
                 data.view=1
+                viewIds.push(params.id)
+                app.$cookies.set('viewIds',viewIds,{
+                    path:'/article',
+                    maxAge: 60 * 60 * 24 * 365 * 3
+                })
             }
-            store.commit('app/setLocalInfo',{k:'viewIds',v:params.id})
             await store.dispatch('article/getArticleDetail', data)
             await store.dispatch('article/getComments', {
                 classId: params.id,
@@ -194,18 +198,16 @@
                 return markdown(content)
             },
             handleLocalInfo(k,v){
-                const userId=window.localStorage.getItem('userId')
-                const userLocal=cloneDeep(JSON.parse(window.localStorage.getItem(userId)))
+                const localInfo=this.$cookies.get(k) || []
                 if(v===undefined){
-                    if(userId){
-                        return userLocal[k]
-                    }else {
-                        return []
-                    }
+                    return this.$cookies.get(k) || []
                 }else {
-                    if(!userLocal[k].includes(v)){
-                        userLocal[k].push(v)
-                        window.localStorage.setItem(userId,JSON.stringify(userLocal))
+                    if(!localInfo.includes(v)){
+                        localInfo.push(v)
+                        this.$cookies.set(k,localInfo,{
+                            path:'/article',
+                            maxAge: 60 * 60 * 24 * 365 * 3
+                        })
                     }
                 }
             },

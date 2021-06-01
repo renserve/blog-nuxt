@@ -89,9 +89,10 @@
         },
 
         mounted() {
-            this.$nextTick(()=>{
+            //会被去广告插件拦截
+            /*this.$nextTick(()=>{
                 this.setFingerprint()
-            })
+            })*/
             this.setTheme(this.theme || 'light')
         }
     }

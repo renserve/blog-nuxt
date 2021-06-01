@@ -63,7 +63,7 @@ module.exports= {
             ],tagRoutes=[],articleRoutes=[];
             articles.data.rows.map(article => {
                 articleRoutes.push({
-                    url:`/article/${article.id}?view=1`,
+                    url:`/article/${article.id}`,
                     changefreq: 'daily',
                     priority: 1,
                     lastmodISO: new Date(article.create_time).toISOString()
