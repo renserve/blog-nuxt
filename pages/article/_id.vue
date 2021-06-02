@@ -113,7 +113,7 @@
                 data.view=1
                 viewIds.push(params.id)
                 app.$cookies.set('viewIds',viewIds,{
-                    path:'/article',
+                    path:'/',
                     maxAge: 60 * 60 * 24 * 365 * 3
                 })
             }
@@ -205,7 +205,7 @@
                     if(!localInfo.includes(v)){
                         localInfo.push(v)
                         this.$cookies.set(k,localInfo,{
-                            path:'/article',
+                            path:'/',
                             maxAge: 60 * 60 * 24 * 365 * 3
                         })
                     }
