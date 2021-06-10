@@ -8,11 +8,12 @@
             <li class="message-item" v-for="message in messages" :key="message.id">
                 <span v-if="message.nickname" class="nickname">{{message.nickname}}</span>
                 <div class="content">
-                    <p v-html="marked(message.content)">
-                    </p>
+<!--                    <p v-html="marked(message.content)"></p>-->
+                    <article-content :content="marked(message.content)"></article-content>
                     <section class="reply-wrapper markdown" v-if="message.reply">
                         <div class="reply-nickname"><i class="iconfont iconzuozhe"></i>：</div>
-                        <div v-html="marked(message.reply)"></div>
+<!--                        <div v-html=""></div>-->
+                        <article-content :content="marked(message.reply)"></article-content>
                     </section>
                 </div>
                 <time class="time" :datetime="message.create_time | filterTime">{{message.create_time | filterTime}}
@@ -30,13 +31,14 @@
     import CommentEditor from '@/components/base/comment-editor/comment-editor'
     import markdown from '@/plugins/marked'
     import {mapState} from 'vuex'
-
+    import ArticleContent from '@/components/layout/article-content/article-content'
     export default {
         name: 'messages-page',
 
         components: {
             SplitLine,
-            CommentEditor
+            CommentEditor,
+            ArticleContent
         },
 
         head() {

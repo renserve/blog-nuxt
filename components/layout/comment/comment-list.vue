@@ -9,18 +9,21 @@
                        target="_blank"></a>
                     <span>{{comment.nickname}}</span>
                 </div>
-                <div class="content" v-html="comment.content"></div>
+<!--                <div class="content" v-html="comment.content"></div>-->
+                <article-content class="content" :content="comment.content"></article-content>
                 <section class="reply-wrapper markdown" v-if="comment.reply">
                     <div class="reply-nickname">
                         <i class="iconfont iconzuozhe"></i>：
                         <!--@{{comment.nickname}}:-->
                         </div>
-                    <div v-html="comment.reply"></div>
+<!--                    <div v-html="comment.reply"></div>-->
+                    <article-content :content="comment.reply"></article-content>
                 </section>
                 <template v-if="comment.children.length">
                     <section class="reply-wrapper markdown" v-for="children in comment.children">
                         <div class="reply-nickname">{{children.nickname}}：</div>
-                        <div v-html="children.content"></div>
+<!--                        <div v-html="children.content"></div>-->
+                        <article-content :content="children.content"></article-content>
                     </section>
                 </template>
                 <footer class="comment-footer">
@@ -46,8 +49,12 @@
 
 <script>
     import gravatar from '@/services/gravatar/gravatar'
-
+    import ArticleContent from '@/components/layout/article-content/article-content'
     export default {
+        components: {
+            ArticleContent
+        },
+
         props: {
             comments: {
                 type: Array,

@@ -82,19 +82,16 @@
                 this.$refs.editor.resetField()
             },
             handleLocalInfo(k,v){
-                const userId=window.localStorage.getItem('userId')
-                const userLocal=cloneDeep(JSON.parse(window.localStorage.getItem(userId)))
-                console.log(k,v)
+                const localInfo=this.$cookies.get(k) || []
                 if(v===undefined){
-                    if(userId){
-                        return userLocal[k]
-                    }else {
-                        return []
-                    }
+                    return this.$cookies.get(k) || []
                 }else {
-                    if(!userLocal[k].includes(v)){
-                        userLocal[k].push(v)
-                        window.localStorage.setItem(userId,JSON.stringify(userLocal))
+                    if(!localInfo.includes(v)){
+                        localInfo.push(v)
+                        this.$cookies.set(k,localInfo,{
+                            path:'/',
+                            maxAge: 60 * 60 * 24 * 365 * 3
+                        })
                     }
                 }
             },

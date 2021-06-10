@@ -1,5 +1,5 @@
 <template>
-    <div v-html="moodContent"></div>
+    <div v-html="relContent"></div>
 </template>
 
 <script>
@@ -12,12 +12,12 @@ export default {
         },
     },
     computed: {
-        moodContent() {
+        relContent() {
             if(this.content){
                 if(/rel="(.*?)"/.test(this.content)){
-                    return this.content.replace(/rel="(.*?)"/g,'rel="external nofollow noopener noreferrer"')
+                    return this.content.replace(/rel="(.*?)"/g,'target="_blank" rel="external nofollow noopener noreferrer"')
                 }else if(/<a/.test(this.content)){
-                    return this.content.replace(/<a/g,'<a rel="external nofollow noopener noreferrer"')
+                    return this.content.replace(/<a/g,'<a target="_blank" rel="external nofollow noopener noreferrer"')
                 }else {
                     return this.content
                 }

@@ -6,12 +6,12 @@ exports.modules = {
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./components/layout/article-content/article-content.vue?vue&type=template&id=1939f08b&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{domProps:{"innerHTML":_vm._s(_vm.moodContent)}},[])}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./components/layout/article-content/article-content.vue?vue&type=template&id=2000fcaa&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{domProps:{"innerHTML":_vm._s(_vm.relContent)}},[])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./components/layout/article-content/article-content.vue?vue&type=template&id=1939f08b&scoped=true&
+// CONCATENATED MODULE: ./components/layout/article-content/article-content.vue?vue&type=template&id=2000fcaa&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./components/layout/article-content/article-content.vue?vue&type=script&lang=js&
 //
@@ -27,12 +27,12 @@ var staticRenderFns = []
     }
   },
   computed: {
-    moodContent() {
+    relContent() {
       if (this.content) {
         if (/rel="(.*?)"/.test(this.content)) {
-          return this.content.replace(/rel="(.*?)"/g, 'rel="external nofollow noopener noreferrer"');
+          return this.content.replace(/rel="(.*?)"/g, 'target="_blank" rel="external nofollow noopener noreferrer"');
         } else if (/<a/.test(this.content)) {
-          return this.content.replace(/<a/g, '<a rel="external nofollow noopener noreferrer"');
+          return this.content.replace(/<a/g, '<a target="_blank" rel="external nofollow noopener noreferrer"');
         } else {
           return this.content;
         }
@@ -65,7 +65,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   injectStyles,
-  "1939f08b",
+  "2000fcaa",
   "787930a0"
   
 )
