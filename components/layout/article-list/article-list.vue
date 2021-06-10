@@ -7,7 +7,8 @@
                         <div>
                             <i class="iconfont iconrili"></i>
                             <time :datetime="article.create_time | filterTime('Y-m-d')">{{article.create_time | filterTime('Y-m-d')}}</time>
-                            <div class="content" v-html="article.content"></div>
+<!--                            <div  class="content" v-html="article.content"></div>-->
+                            <article-content class="content" :content="article.content"></article-content>
                         </div>
                         <img v-if="article.cover" :src="article.cover" alt="">
                     </div>
@@ -57,12 +58,14 @@
 
 <script>
     import ClientOnly from '@/components/base/client-only/client-only'
+    import ArticleContent from '@/components/layout/article-content/article-content'
     import {mapState} from 'vuex'
     import isObject from 'lodash/isObject'
     export default {
         name: 'article-list',
         components: {
-            ClientOnly
+            ClientOnly,
+            ArticleContent
         },
         props: {
             articles: {

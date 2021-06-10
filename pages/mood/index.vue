@@ -21,7 +21,9 @@
                 <i class="iconfont iconrili"></i>
                 <time :datetime="list.create_time | filterTime('Y-m-d')">{{list.create_time | filterTime('Y-m-d')}}
                 </time>
-                <div class="content" v-html="list.content"></div>
+<!--                <div class="content" v-html="moodContent(list.content)"></div>-->
+                <article-content class="content" :content="list.content"></article-content>
+
             </div>
             <img v-if="list.cover" :src="list.cover" alt="">
         </client-only>
@@ -36,13 +38,15 @@ import {post} from '@/services/http/axios'
 import SplitLine from '@/components/base/split-line/split-line'
 import ClientOnly from '@/components/base/client-only/client-only'
 import {mapState} from 'vuex'
+import ArticleContent from '@/components/layout/article-content/article-content'
 import flatten from 'lodash/flatten'
 
 export default {
     name: 'mood-page',
     components: {
         SplitLine,
-        ClientOnly
+        ClientOnly,
+        ArticleContent
     },
 
     head() {

@@ -178,11 +178,18 @@
 
             markedContent() {
                 if (this.article.content) {
+                    let content;
                     if (this.article.articleType === 0 || this.article.articleType === 1) {
-                        return this.article.content
+                        content=this.article.content
                     } else {
-                        return markdown(this.article.content)
+                        content=markdown(this.article.content)
                     }
+                    if(/rel="(.*?)"/.test(content)){
+                        content=content.replace(/rel="(.*?)"/g,'rel="external nofollow noopener noreferrer"')
+                    }else if(/<a/.test(content)){
+                        content=content.replace(/<a/g,'<a rel="external nofollow noopener noreferrer"')
+                    }
+                    return content
                 } else {
                     return ''
                 }

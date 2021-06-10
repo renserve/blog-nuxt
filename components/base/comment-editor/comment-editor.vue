@@ -9,6 +9,7 @@
                         <i class="icon icon-ant-close" @click="closeReplyContent"></i>
                         <strong class="reply-author">@{{reply.nickname}}</strong>
                         <div class="reply-content markdown" v-html="reply.content"></div>
+<!--                        <article-content class="reply-content markdown" :content="reply.content"></article-content>-->
                     </div>
                 </section>
                 <!-- 评论内容区域 -->
@@ -87,6 +88,8 @@
     import ClickOutside from '@/services/directives/click-outside'
     import {getCursorPosition, setCursorPosition} from '@/services/utils/dom'
     import gravatar from '@/services/gravatar/gravatar'
+    import ArticleContent from '@/components/layout/article-content/article-content'
+
 
     const emojiList = [
         '😃', '😂', '😅', '😉', '😌', '😔', '😓', '😘', '😡', '😭', '😱', '😳', '😵',
@@ -94,6 +97,9 @@
     ]
 
     export default {
+        components: {
+            ArticleContent
+        },
         props: {
             placeholder: {
                 type: String
