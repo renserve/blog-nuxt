@@ -183,6 +183,10 @@ export const actions = {
     async getArticleDetail({commit}, params) {
         try {
             const result = await article.getArticleDetail(params)
+            if(!result.id){
+                //文章不存在
+                return '/404'
+            }
             const categoryId=result.categories.map(i=>i.id).join(',')
             const randomPage=random(parseInt(result.total/10))
             const {rows,total} = await article.getArticles({...params,categoryId,page:randomPage,count:10})

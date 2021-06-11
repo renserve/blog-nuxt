@@ -276,7 +276,14 @@ _axios.interceptors.response.use(async res => {
           window.location.reload();
           alert('请重新登录');
         } else {
-          if (false) {}
+          /*if(process.client){
+              if(message && isObject(message)){
+                  alert(Object.values(message)[0])
+              }else {
+                  alert(message)
+              }
+          }*/
+          return resolve(res.data);
         }
       }
     });
@@ -6819,6 +6826,12 @@ const actions = {
   }, params) {
     try {
       const result = await article["a" /* default */].getArticleDetail(params);
+
+      if (!result.id) {
+        //文章不存在
+        return '/404';
+      }
+
       const categoryId = result.categories.map(i => i.id).join(',');
       const randomPage = random_default()(parseInt(result.total / 10));
       const {

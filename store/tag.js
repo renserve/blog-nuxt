@@ -98,7 +98,6 @@ export const actions = {
     },
     async getArticles({commit,rootState,state,dispatch}, params) {
         const isMoodList=rootState.app.isMoodList.tag
-        console.log(isMoodList,'isMoodList')
         commit('setPage',{isMoodList,page:0});
         commit('app/setParamsAndToggleLoading',{toggleLoading:true,params},{root:true});
         if(!state.tags || !state.categories){

@@ -112,9 +112,14 @@ _axios.interceptors.response.use(async (res) => {
                         window.location.reload()
                         alert('请重新登录')
                     }else {
-                        if(process.client){
-                            message && alert(isObject(message) ? Object.values(message)[0] : message)
-                        }
+                        /*if(process.client){
+                            if(message && isObject(message)){
+                                alert(Object.values(message)[0])
+                            }else {
+                                alert(message)
+                            }
+                        }*/
+                        return resolve(res.data)
                     }
                 }
             })

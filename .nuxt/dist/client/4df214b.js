@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{542:function(t,e,n){"use strict";n.r(e);var r={name:"tagWrap",validate:function(t){var e=t.params;return/^category$/.test(e.category)}},c=n(4),component=Object(c.a)(r,(function(){var t=this.$createElement;return(this._self._c||t)("nuxt-child")}),[],!1,null,"74f9a39b",null);e.default=component.exports}}]);

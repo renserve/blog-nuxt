@@ -105,7 +105,7 @@
             }
         },
 
-        async fetch({store, params,app}) {
+        async fetch({store, params,app,redirect}) {
             const token = store.state.app.token
             const data={id: params.id, isFront: token ? true : false}
             const viewIds=app.$cookies.get('viewIds') || []
@@ -117,7 +117,10 @@
                     maxAge: 60 * 60 * 24 * 365 * 3
                 })
             }
-            await store.dispatch('article/getArticleDetail', data)
+            let path=await store.dispatch('article/getArticleDetail', data)
+            if(path){
+                redirect(path)
+            }
             await store.dispatch('article/getComments', {
                 classId: params.id,
                 page: 0,
