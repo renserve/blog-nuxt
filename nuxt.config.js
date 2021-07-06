@@ -18,6 +18,7 @@ module.exports = {
             {rel: 'shortcut icon', type: 'image/png', href: '//renserve.com/favicon.png'},
             { rel: 'apple-touch-icon-precomposed', href: '//renserve.com/favicon.png' },
             { rel: 'stylesheet', href: '//at.alicdn.com/t/font_2079289_r2fige13dde.css' },
+                { rel: 'stylesheet', href: '//blog.renserve.com/patch.css' },
             { rel: 'dns-prefetch', href: '//renserve.com' },
             { rel: 'dns-prefetch', href: '//blog.renserve.com' },
         ],
