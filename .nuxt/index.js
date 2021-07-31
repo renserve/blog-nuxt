@@ -13,8 +13,8 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_googleanalytics_7ff6b9d4 from 'nuxt_plugin_googleanalytics_7ff6b9d4' // Source: .\\google-analytics.js (mode: 'client')
-import nuxt_plugin_cookieuniversalnuxt_3d2a1aba from 'nuxt_plugin_cookieuniversalnuxt_3d2a1aba' // Source: .\\cookie-universal-nuxt.js (mode: 'all')
+import nuxt_plugin_googleanalytics_02f9939e from 'nuxt_plugin_googleanalytics_02f9939e' // Source: .\\google-analytics.js (mode: 'client')
+import nuxt_plugin_cookieuniversalnuxt_2dbdd07d from 'nuxt_plugin_cookieuniversalnuxt_2dbdd07d' // Source: .\\cookie-universal-nuxt.js (mode: 'all')
 import nuxt_plugin_marked_38210f95 from 'nuxt_plugin_marked_38210f95' // Source: ..\\plugins\\marked.js (mode: 'all')
 import nuxt_plugin_highlight_54dd1b39 from 'nuxt_plugin_highlight_54dd1b39' // Source: ..\\plugins\\highlight.js (mode: 'all')
 import nuxt_plugin_gravatar_5847583d from 'nuxt_plugin_gravatar_5847583d' // Source: ..\\plugins\\gravatar.js (mode: 'all')
@@ -81,7 +81,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"点滴人生-记录日常学习和生活的个人网站","titleTemplate":"%s","meta":[{"charset":"utf-8"},{"http-equiv":"X-UA-Compatible","content":"IE=Edge, chrome=1"},{"name":"viewport","content":"width=device-width, initial-scale=1, user-scalable=no"},{"hid":"keywords","name":"keywords","content":"个人博客，日常学习，生活记录"},{"name":"apple-mobile-web-app-capable","content":"yes"},{"name":"apple-mobile-web-app-status-bar-style","content":"black-translucent"},{"name":"mobile-web-app-capable","content":"yes"},{"hid":"description","name":"description","content":"人生是一场持续的修行，记录生活中的点滴，在前行中不断矫正方向，成为心中更加优秀的自己"}],"link":[{"rel":"shortcut icon","type":"image\u002Fpng","href":"\u002F\u002Frenserve.com\u002Ffavicon.png"},{"rel":"apple-touch-icon-precomposed","href":"\u002F\u002Frenserve.com\u002Ffavicon.png"},{"rel":"stylesheet","href":"\u002F\u002Fat.alicdn.com\u002Ft\u002Ffont_2079289_r2fige13dde.css"},{"rel":"dns-prefetch","href":"\u002F\u002Frenserve.com"},{"rel":"dns-prefetch","href":"\u002F\u002Fblog.renserve.com"}],"script":[{"type":"text\u002Fjavascript","src":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fjs-cookie@1.5.0\u002Fsrc\u002Fjs.cookie.min.js"},{"type":"text\u002Fjavascript","src":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fmarked@0.7.0\u002Fmarked.min.js"}],"noscript":[{"innerHTML":"This website requires JavaScript."}],"__dangerouslyDisableSanitizers":["script"],"style":[]},
+    head: {"title":"点滴人生-记录日常学习和生活的个人网站","titleTemplate":"%s","meta":[{"charset":"utf-8"},{"http-equiv":"X-UA-Compatible","content":"IE=Edge, chrome=1"},{"name":"viewport","content":"width=device-width, initial-scale=1, user-scalable=no"},{"hid":"keywords","name":"keywords","content":"个人博客，日常学习，生活记录"},{"name":"apple-mobile-web-app-capable","content":"yes"},{"name":"apple-mobile-web-app-status-bar-style","content":"black-translucent"},{"name":"mobile-web-app-capable","content":"yes"},{"hid":"description","name":"description","content":"人生是一场持续的修行，记录生活中的点滴，在前行中不断矫正方向，成为心中更加优秀的自己"}],"link":[{"rel":"shortcut icon","type":"image\u002Fpng","href":"\u002F\u002Frenserve.com\u002Ffavicon.png"},{"rel":"apple-touch-icon-precomposed","href":"\u002F\u002Frenserve.com\u002Ffavicon.png"},{"rel":"stylesheet","href":"\u002F\u002Fat.alicdn.com\u002Ft\u002Ffont_2079289_r2fige13dde.css"},{"rel":"stylesheet","href":"\u002F\u002Fblog.renserve.com\u002Fpatch.css"},{"rel":"dns-prefetch","href":"\u002F\u002Frenserve.com"},{"rel":"dns-prefetch","href":"\u002F\u002Fblog.renserve.com"}],"script":[{"type":"text\u002Fjavascript","src":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fjs-cookie@1.5.0\u002Fsrc\u002Fjs.cookie.min.js"},{"type":"text\u002Fjavascript","src":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fmarked@0.7.0\u002Fmarked.min.js"}],"noscript":[{"innerHTML":"This website requires JavaScript."}],"__dangerouslyDisableSanitizers":["script"],"style":[]},
 
     store,
     router,
@@ -210,12 +210,12 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (process.client && typeof nuxt_plugin_googleanalytics_7ff6b9d4 === 'function') {
-    await nuxt_plugin_googleanalytics_7ff6b9d4(app.context, inject)
+  if (process.client && typeof nuxt_plugin_googleanalytics_02f9939e === 'function') {
+    await nuxt_plugin_googleanalytics_02f9939e(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_cookieuniversalnuxt_3d2a1aba === 'function') {
-    await nuxt_plugin_cookieuniversalnuxt_3d2a1aba(app.context, inject)
+  if (typeof nuxt_plugin_cookieuniversalnuxt_2dbdd07d === 'function') {
+    await nuxt_plugin_cookieuniversalnuxt_2dbdd07d(app.context, inject)
   }
 
   if (typeof nuxt_plugin_marked_38210f95 === 'function') {

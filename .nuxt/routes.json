@@ -2,109 +2,109 @@
   {
     "name": "about",
     "path": "/about",
-    "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\about\\\\index.vue",
+    "component": "F:\\\\blog-nuxt-master\\\\pages\\\\about\\\\index.vue",
     "chunkName": "pages/about/index",
     "url": "/about",
-    "_name": "_5b54592f"
+    "_name": "_2d882776"
   },
   {
     "name": "archive",
     "path": "/archive",
-    "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\archive\\\\index.vue",
+    "component": "F:\\\\blog-nuxt-master\\\\pages\\\\archive\\\\index.vue",
     "chunkName": "pages/archive/index",
     "url": "/archive",
-    "_name": "_d6c0f74c"
+    "_name": "_adce463e"
   },
   {
     "name": "login",
     "path": "/login",
-    "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\login\\\\index.vue",
+    "component": "F:\\\\blog-nuxt-master\\\\pages\\\\login\\\\index.vue",
     "chunkName": "pages/login/index",
     "url": "/login",
-    "_name": "_3180cbd3"
+    "_name": "_03b49a1a"
   },
   {
     "name": "messages",
     "path": "/messages",
-    "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\messages\\\\index.vue",
+    "component": "F:\\\\blog-nuxt-master\\\\pages\\\\messages\\\\index.vue",
     "chunkName": "pages/messages/index",
     "url": "/messages",
-    "_name": "_7a3de0ec"
+    "_name": "_1620cd76"
   },
   {
     "name": "mood",
     "path": "/mood",
-    "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\mood\\\\index.vue",
+    "component": "F:\\\\blog-nuxt-master\\\\pages\\\\mood\\\\index.vue",
     "chunkName": "pages/mood/index",
     "url": "/mood",
-    "_name": "_5aedd53e"
+    "_name": "_5de23b8c"
   },
   {
     "name": "sitemap",
     "path": "/sitemap",
-    "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\sitemap\\\\index.vue",
+    "component": "F:\\\\blog-nuxt-master\\\\pages\\\\sitemap\\\\index.vue",
     "chunkName": "pages/sitemap/index",
     "url": "/sitemap",
-    "_name": "_6d405af2"
+    "_name": "_444da9e4"
   },
   {
     "name": "about-id",
     "path": "/about/:id",
-    "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\about\\\\_id.vue",
+    "component": "F:\\\\blog-nuxt-master\\\\pages\\\\about\\\\_id.vue",
     "chunkName": "pages/about/_id",
-    "_name": "_b5964952"
+    "_name": "_18c58f5e"
   },
   {
     "name": "article-id",
     "path": "/article/:id?",
-    "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\article\\\\_id.vue",
+    "component": "F:\\\\blog-nuxt-master\\\\pages\\\\article\\\\_id.vue",
     "chunkName": "pages/article/_id",
-    "_name": "_838938e4"
+    "_name": "_df219c56"
   },
   {
     "name": "tag-id",
     "path": "/tag/:id?",
-    "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\tag\\\\_id.vue",
+    "component": "F:\\\\blog-nuxt-master\\\\pages\\\\tag\\\\_id.vue",
     "chunkName": "pages/tag/_id",
-    "_name": "_7000f26a"
+    "_name": "_6326079e"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\index.vue",
+    "component": "F:\\\\blog-nuxt-master\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
     "url": "/",
-    "_name": "_73e40eb8"
+    "_name": "_ead29b5e"
   },
   {
     "path": "/:category",
-    "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\_category.vue",
+    "component": "F:\\\\blog-nuxt-master\\\\pages\\\\_category.vue",
     "chunkName": "pages/_category",
     "children": [
       {
         "name": "category",
         "path": "",
-        "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\_category\\\\index.vue",
+        "component": "F:\\\\blog-nuxt-master\\\\pages\\\\_category\\\\index.vue",
         "chunkName": "pages/_category/index",
-        "_name": "_80bf3942"
+        "_name": "_c9b493b4"
       },
       {
         "name": "category-categoryId",
         "path": ":categoryId",
-        "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\_category\\\\_categoryId.vue",
+        "component": "F:\\\\blog-nuxt-master\\\\pages\\\\_category\\\\_categoryId.vue",
         "chunkName": "pages/_category/_categoryId",
         "children": [
           {
             "name": "category-categoryId-tagId",
             "path": ":tagId?",
-            "component": "F:\\\\future\\\\blog\\\\nuxt\\\\pages\\\\_category\\\\_categoryId\\\\_tagId.vue",
+            "component": "F:\\\\blog-nuxt-master\\\\pages\\\\_category\\\\_categoryId\\\\_tagId.vue",
             "chunkName": "pages/_category/_categoryId/_tagId",
-            "_name": "_5c9a70fb"
+            "_name": "_4cf7db82"
           }
         ],
-        "_name": "_58c49025"
+        "_name": "_cb071ca8"
       }
     ],
-    "_name": "_47023fc3"
+    "_name": "_93d12248"
   }
 ]

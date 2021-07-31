@@ -1033,7 +1033,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   "5f30b485",
-  "60cece42"
+  "05659002"
   
 )
 
@@ -1359,7 +1359,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   "526b20fe",
-  "06fb7d9b"
+  "43ddf4bb"
   
 )
 
@@ -3727,33 +3727,33 @@ if (false) {}
 
 
 
-const _5b54592f = () => interopDefault(__webpack_require__.e(/* import() | pages/about/index */ 7).then(__webpack_require__.bind(null, 200)));
+const _2d882776 = () => interopDefault(__webpack_require__.e(/* import() | pages/about/index */ 7).then(__webpack_require__.bind(null, 200)));
 
-const _d6c0f74c = () => interopDefault(__webpack_require__.e(/* import() | pages/archive/index */ 8).then(__webpack_require__.bind(null, 201)));
+const _adce463e = () => interopDefault(__webpack_require__.e(/* import() | pages/archive/index */ 8).then(__webpack_require__.bind(null, 201)));
 
-const _3180cbd3 = () => interopDefault(__webpack_require__.e(/* import() | pages/login/index */ 11).then(__webpack_require__.bind(null, 202)));
+const _03b49a1a = () => interopDefault(__webpack_require__.e(/* import() | pages/login/index */ 11).then(__webpack_require__.bind(null, 202)));
 
-const _7a3de0ec = () => interopDefault(__webpack_require__.e(/* import() | pages/messages/index */ 12).then(__webpack_require__.bind(null, 203)));
+const _1620cd76 = () => interopDefault(__webpack_require__.e(/* import() | pages/messages/index */ 12).then(__webpack_require__.bind(null, 203)));
 
-const _5aedd53e = () => interopDefault(__webpack_require__.e(/* import() | pages/mood/index */ 13).then(__webpack_require__.bind(null, 204)));
+const _5de23b8c = () => interopDefault(__webpack_require__.e(/* import() | pages/mood/index */ 13).then(__webpack_require__.bind(null, 204)));
 
-const _6d405af2 = () => interopDefault(__webpack_require__.e(/* import() | pages/sitemap/index */ 14).then(__webpack_require__.bind(null, 205)));
+const _444da9e4 = () => interopDefault(__webpack_require__.e(/* import() | pages/sitemap/index */ 14).then(__webpack_require__.bind(null, 205)));
 
-const _b5964952 = () => interopDefault(__webpack_require__.e(/* import() | pages/about/_id */ 6).then(__webpack_require__.bind(null, 206)));
+const _18c58f5e = () => interopDefault(__webpack_require__.e(/* import() | pages/about/_id */ 6).then(__webpack_require__.bind(null, 206)));
 
-const _838938e4 = () => interopDefault(__webpack_require__.e(/* import() | pages/article/_id */ 9).then(__webpack_require__.bind(null, 198)));
+const _df219c56 = () => interopDefault(__webpack_require__.e(/* import() | pages/article/_id */ 9).then(__webpack_require__.bind(null, 198)));
 
-const _7000f26a = () => interopDefault(__webpack_require__.e(/* import() | pages/tag/_id */ 15).then(__webpack_require__.bind(null, 207)));
+const _6326079e = () => interopDefault(__webpack_require__.e(/* import() | pages/tag/_id */ 15).then(__webpack_require__.bind(null, 207)));
 
-const _73e40eb8 = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 10).then(__webpack_require__.bind(null, 199)));
+const _ead29b5e = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 10).then(__webpack_require__.bind(null, 199)));
 
-const _47023fc3 = () => interopDefault(__webpack_require__.e(/* import() | pages/_category */ 2).then(__webpack_require__.bind(null, 208)));
+const _93d12248 = () => interopDefault(__webpack_require__.e(/* import() | pages/_category */ 2).then(__webpack_require__.bind(null, 208)));
 
-const _80bf3942 = () => interopDefault(__webpack_require__.e(/* import() | pages/_category/index */ 5).then(__webpack_require__.bind(null, 209)));
+const _c9b493b4 = () => interopDefault(__webpack_require__.e(/* import() | pages/_category/index */ 5).then(__webpack_require__.bind(null, 209)));
 
-const _58c49025 = () => interopDefault(__webpack_require__.e(/* import() | pages/_category/_categoryId */ 3).then(__webpack_require__.bind(null, 210)));
+const _cb071ca8 = () => interopDefault(__webpack_require__.e(/* import() | pages/_category/_categoryId */ 3).then(__webpack_require__.bind(null, 210)));
 
-const _5c9a70fb = () => interopDefault(__webpack_require__.e(/* import() | pages/_category/_categoryId/_tagId */ 4).then(__webpack_require__.bind(null, 211))); // TODO: remove in Nuxt 3
+const _4cf7db82 = () => interopDefault(__webpack_require__.e(/* import() | pages/_category/_categoryId/_tagId */ 4).then(__webpack_require__.bind(null, 211))); // TODO: remove in Nuxt 3
 
 
 const emptyFn = () => {};
@@ -3773,58 +3773,58 @@ const routerOptions = {
   scrollBehavior: router_scrollBehavior,
   routes: [{
     path: "/about",
-    component: _5b54592f,
+    component: _2d882776,
     name: "about"
   }, {
     path: "/archive",
-    component: _d6c0f74c,
+    component: _adce463e,
     name: "archive"
   }, {
     path: "/login",
-    component: _3180cbd3,
+    component: _03b49a1a,
     name: "login"
   }, {
     path: "/messages",
-    component: _7a3de0ec,
+    component: _1620cd76,
     name: "messages"
   }, {
     path: "/mood",
-    component: _5aedd53e,
+    component: _5de23b8c,
     name: "mood"
   }, {
     path: "/sitemap",
-    component: _6d405af2,
+    component: _444da9e4,
     name: "sitemap"
   }, {
     path: "/about/:id",
-    component: _b5964952,
+    component: _18c58f5e,
     name: "about-id"
   }, {
     path: "/article/:id?",
-    component: _838938e4,
+    component: _df219c56,
     name: "article-id"
   }, {
     path: "/tag/:id?",
-    component: _7000f26a,
+    component: _6326079e,
     name: "tag-id"
   }, {
     path: "/",
-    component: _73e40eb8,
+    component: _ead29b5e,
     name: "index"
   }, {
     path: "/:category",
-    component: _47023fc3,
+    component: _93d12248,
     children: [{
       path: "",
-      component: _80bf3942,
+      component: _c9b493b4,
       name: "category"
     }, {
       path: ":categoryId",
-      component: _58c49025,
+      component: _cb071ca8,
       name: "category-categoryId",
       children: [{
         path: ":tagId?",
-        component: _5c9a70fb,
+        component: _4cf7db82,
         name: "category-categoryId-tagId"
       }]
     }]
@@ -3949,7 +3949,7 @@ var error_component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   "e3b0794a",
-  "5612b64e"
+  "29b8280e"
   
 )
 
@@ -4253,7 +4253,7 @@ var nuxt_loading_component = Object(componentNormalizer["a" /* default */])(
   false,
   nuxt_loading_injectStyles,
   null,
-  "c988ea9e"
+  "2d92dc5e"
   
 )
 
@@ -4353,7 +4353,7 @@ var desktop_nav_component = Object(componentNormalizer["a" /* default */])(
   false,
   desktop_nav_injectStyles,
   "f4faaa90",
-  "4e056418"
+  "095b2338"
   
 )
 
@@ -4476,7 +4476,7 @@ var mobile_nav_component = Object(componentNormalizer["a" /* default */])(
   false,
   mobile_nav_injectStyles,
   "445e3302",
-  "1a727fc2"
+  "e84f46bc"
   
 )
 
@@ -4554,7 +4554,7 @@ var switch_theme_component = Object(componentNormalizer["a" /* default */])(
   false,
   switch_theme_injectStyles,
   "5b7ece1e",
-  "1089ef7b"
+  "b8d972ca"
   
 )
 
@@ -4661,7 +4661,7 @@ var page_header_component = Object(componentNormalizer["a" /* default */])(
   false,
   page_header_injectStyles,
   "222cf4c4",
-  "5839221c"
+  "66ecc612"
   
 )
 
@@ -4765,7 +4765,7 @@ var page_footer_component = Object(componentNormalizer["a" /* default */])(
   false,
   page_footer_injectStyles,
   "1284407f",
-  "adc1fbe4"
+  "3c28592e"
   
 )
 
@@ -4951,7 +4951,7 @@ var page_search_component = Object(componentNormalizer["a" /* default */])(
   false,
   page_search_injectStyles,
   "13a8d3c9",
-  "ea144cb0"
+  "1dff30c8"
   
 )
 
@@ -5086,7 +5086,7 @@ var scroll_top_component = Object(componentNormalizer["a" /* default */])(
   false,
   scroll_top_injectStyles,
   "78913cc7",
-  "2fc00118"
+  "15d49e94"
   
 )
 
@@ -5225,7 +5225,7 @@ var default_component = Object(componentNormalizer["a" /* default */])(
   false,
   default_injectStyles,
   "79e97903",
-  "48028b5c"
+  "1bf6b972"
   
 )
 
@@ -5647,7 +5647,7 @@ var empty_component = Object(componentNormalizer["a" /* default */])(
   false,
   empty_injectStyles,
   "e90044ea",
-  "3e2f9f46"
+  "3a3a7f7d"
   
 )
 
@@ -5678,7 +5678,7 @@ var loading_component = Object(componentNormalizer["a" /* default */])(
   false,
   loading_injectStyles,
   "85d028d6",
-  "0e30330a"
+  "9784b4ca"
   
 )
 
@@ -5822,6 +5822,9 @@ async function createApp(ssrContext, config = {}) {
       }, {
         "rel": "stylesheet",
         "href": "\u002F\u002Fat.alicdn.com\u002Ft\u002Ffont_2079289_r2fige13dde.css"
+      }, {
+        "rel": "stylesheet",
+        "href": "\u002F\u002Fblog.renserve.com\u002Fpatch.css"
       }, {
         "rel": "dns-prefetch",
         "href": "\u002F\u002Frenserve.com"
