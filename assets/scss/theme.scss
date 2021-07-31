@@ -1,0 +1,87 @@
+@mixin theme(
+    $theme-btn,
+    $theme-primary,
+    $font-color,
+    $font-color-article,
+    $font-color-light,
+    $font-color-dark,
+    $theme-active,
+    $link-color,
+    $border-color,
+    $tag-color,
+    $theme-background-color-active,
+    $main-border-color,
+    $code-bg,
+    $mood-bg,
+    $box-shadow
+) {
+    --app-background-color: #{$theme-primary};
+    --app-box-shadow: #{$box-shadow};
+    //--app-background-color-light: #{lighten($theme-primary, 3%)};
+    --app-background-color-light: #{$theme-primary};
+    --app-background-color-active: #{$theme-background-color-active};
+
+    --primary-light-0: #{lighten($theme-primary, 5%)};
+
+    --font-color-primary: #{$font-color};
+    --font-color-article: #{$font-color-article};
+    --font-color-light: #{$font-color-light};
+    --font-color-dark: #{$font-color-dark};
+
+    --theme-active: #{$theme-active};
+    --theme-btn: #{$theme-btn};
+    --border-color: #{$border-color};
+    --main-border-color: #{$main-border-color};
+    --tool-background-color: #{$border-color};
+
+    --tag-color: #{$tag-color};
+
+    --code-background: #{$code-bg};
+    --mood-background: #{$mood-bg};
+
+    --link-color: #{$link-color};
+}
+
+body {
+    &#light {
+        @include theme(
+                $theme-btn: #333,
+                $theme-background-color-active:#fff,
+                //$theme-primary: #fff,
+                $box-shadow:rgba(0, 0, 0, 0.05),
+                $theme-primary: #FFFBF0,
+                $font-color: #161b3d,
+                $font-color-article: #666,
+                $font-color-light: #999,
+                $font-color-dark: #161b3d,
+                $theme-active: #2821fc,
+                $link-color: #75bfd7,
+                $main-border-color:#BFAB86,
+                $border-color: #dcdfe7,
+                $tag-color: #f4f4f4,
+                //$tag-color: #FFFBF0,
+                $code-bg: #f7f7f7,
+                $mood-bg:#fafafa
+        )
+    }
+
+    &#dark {
+        @include theme(
+                $theme-btn: #fff,
+                $box-shadow:rgba(255, 255, 255, 0.05),
+                $theme-background-color-active:#282c35,
+                $theme-primary: #282c35,
+                $font-color: #c0c0c0,
+                $font-color-article: #c0c0c0,
+                $font-color-light: #999,
+                $font-color-dark: #d3d3d3,
+                $theme-active: #75bfd7,
+                $link-color: #75bfd7,
+                $main-border-color:#545c6f,
+                $border-color: #545c6f,
+                $tag-color: #333844,
+                $code-bg: #21252c,
+                $mood-bg:#21252c
+        )
+    }
+}

@@ -1,0 +1,39 @@
+@font-face {font-family: "iconfont";
+    src: url('./font_2079289_r2fige13dde.ttf?t=1601210019933') format('truetype'); /* IE9 */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.iconhuanyihuan:before {
+    content: "\e62d";
+}
+
+.iconchahao:before {
+    content: "\e617";
+}
+
+.iconjiahao:before {
+    content: "\e62f";
+}
+
+.iconrili:before {
+    content: "\e72a";
+}
+
+.iconzuozhe:before {
+    content: "\e67b";
+}
+
+.icondenglu:before {
+    content: "\e600";
+}
+
+.iconpeizhitubiaosvg-:before {
+    content: "\e66f";
+}
